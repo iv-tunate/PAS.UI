@@ -1,4 +1,10 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api/v1";
+function getApiUrl(): string {
+  const env = (process.env.NEXT_PUBLIC_API_URL || "").trim().replace(/\/+$/, "");
+  if (!env) return "http://localhost:8080/api/v1";
+  return env.endsWith("/api/v1") ? env : `${env}/api/v1`;
+}
+
+const API_URL = getApiUrl();
 
 const ACCESS_TOKEN_KEY = "access_token";
 const REFRESH_TOKEN_KEY = "refresh_token";

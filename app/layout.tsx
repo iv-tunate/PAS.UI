@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: "Akintola Samuel",
   description:
     "Teaching, courses, and books from Akintola Samuel — Founder and Senior Pastor of Gateway Nation.",
+  icons: {
+    icon: [
+      { url: "/brand/akintola-logo.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/brand/akintola-logo.svg",
+    apple: "/brand/akintola-logo.svg",
+  },
 };
 
 const themeInitScript = `
@@ -28,6 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" type="image/svg+xml" href="/brand/akintola-logo.svg" />
+        <link rel="apple-touch-icon" href="/brand/akintola-logo.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
