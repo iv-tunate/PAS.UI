@@ -1,32 +1,8 @@
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import type { Metadata } from "next";
-import { Manrope, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ContentProvider } from "@/contexts/ContentContext";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-// Only for the "Akintola Samuel" wordmark.
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["500", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-logo",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Akintola Samuel",
@@ -52,10 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body
-        className={`${manrope.variable} ${inter.variable} ${playfair.variable} font-body bg-paper text-ink dark:bg-ink dark:text-paper transition-colors duration-300`}
+        className="font-body bg-paper text-ink dark:bg-ink dark:text-paper transition-colors duration-300"
       >
         <ScrollProgress />
         <AuthProvider>
