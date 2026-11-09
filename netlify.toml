@@ -1,0 +1,11 @@
+# Netlify configuration for Next.js 14 (App Router)
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
