@@ -16,6 +16,30 @@ export const metadata: Metadata = {
     shortcut: "/brand/akintola-logo.svg",
     apple: "/brand/akintola-logo.svg",
   },
+  openGraph: {
+    title: "Akintola Samuel",
+    description:
+      "Teaching, courses, and books from Akintola Samuel — Founder and Senior Pastor of Gateway Nation.",
+    url: "https://akintolasamuel.netlify.app",
+    siteName: "Akintola Samuel",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Akintola Samuel — Pastor · Teacher · Author",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Akintola Samuel",
+    description:
+      "Teaching, courses, and books from Akintola Samuel — Founder and Senior Pastor of Gateway Nation.",
+    images: ["/opengraph-image"],
+  },
 };
 
 const themeInitScript = `
